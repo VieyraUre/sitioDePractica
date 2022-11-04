@@ -1,0 +1,13 @@
+-let places = ['1st-Place', '2nd-Place', '3rd-Place', '4th-Place', '5th-Place', '6th-Place', '7th-Place', '8th-Place', '9th-Place', '10th-Place']
+-let prizes = ['$500', '$400', '$300', '$200', '$100', '$100', '$100', '$100', '$100', '$100']
+
+section(class="s-center main-container__table")
+	h2 Tournament Rewards
+	div(class="ed-container main-container__table--div")
+		table(class="ed-item main-container__table--table")
+			caption(class="main-container__table--caption") December 1st 2020 - January 1st 2021
+			tbody(class="main-container__table--tbody")
+				each place, key in places 
+					tr(class="main-container__table--tr") 
+						td(class="main-container__table--td")= place
+						td(class="main-container__table--td")= prizes[key]

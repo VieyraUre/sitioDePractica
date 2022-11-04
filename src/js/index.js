@@ -1,6 +1,6 @@
-import {topNav} from './modules/topNav'
-import {searchFilter} from './modules/searchFilter'
-import {swDetecter} from './modules/swDetecter';
+import {topNav} from './components/topNav'
+import {searchFilter} from './components/searchFilter'
+import {swDetecter} from './components/swDetecter';
 (()=>{
 	swDetecter();
 	topNav();

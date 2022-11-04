@@ -1,11 +1,13 @@
 extends ../config/template
 append config
-	-currentPage		= "home"
-	-siteName			= 'kikeestrada'
+	-currentPage		= "Chirstmas"
+	-siteName			= 'Landing'
 	-content			= 'content'
 	-pageDescription	= 'This website contains a collection of projects developed by Enrique Estrada using a Gulp boilerplate developed by him'
 block main-header
+	include ../components/main-hero
 block main-container 
-	include ../components/markdown
+	include ../components/main-container
 block main-footer
+	include ../components/footer
 block scripts

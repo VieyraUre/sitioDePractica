@@ -1,0 +1,17 @@
+.btn {
+	border: none;
+    border-radius: 6px;
+	color: var(--color-body);
+	font-weight: bold;
+    padding: 8px;
+	text-transform: uppercase;
+	
+	&__primary {
+		background-color: var(--color-first);
+	}
+	
+	&__secondary {
+		background-color: var(--color-second-light);
+	}
+}
+

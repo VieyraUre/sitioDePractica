@@ -5,7 +5,13 @@
     --header-height 	: 4rem;
   }
 	//native color vars
-	--color-first      	: #007BDF;
+	--color-background      	: #262626;
+	--color-border      	: #7F7C7C;
+	--color-first      	: #76B51B;
+	--color-second      	: #19A5BC;
+	--color-second-dark      	: #15708C;
+	--color-second-light      	: #3EB0DA;
+	--color-body      	: #FFF;
 }
 // Sass Color Vars
 $color-first 			: var(--color-first			);

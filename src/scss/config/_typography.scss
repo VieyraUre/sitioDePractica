@@ -4,14 +4,14 @@
 }
 
 // Font families
-$body-font    : Lato,        'sans-serif';
-$heading-font : 'Open Sans', 'sans-serif';
+$body-font    : Helvetica,        'sans-serif';
+$heading-font : 'Helvetica', 'sans-serif';
 
 // CSS variables for typography
 :root {
   // Font families
-  --heading-font : 'Open Sans', sans-serif;
-  --body-font    : Lato,        sans-serif;
+  --heading-font : 'Helvetica', sans-serif;
+  --body-font    : Helvetica,        sans-serif;
 
   // Font sizes
   --h1-font-size        : #{rem(24px)};
@@ -148,7 +148,7 @@ h6, .t6 { @include t6 }
 // Default text styles
 body {
   @include normal;
-  color : var(--text-color);
+  color : var(--color-body);
 }
 
 // classes for font-family
@@ -188,7 +188,7 @@ blockquote {
 // Links
 // Menu links doesn't have underline
 a {
-  color : var(--second-color);
+  color : var(--color-body);
 
   main & {
     text-decoration : none;
