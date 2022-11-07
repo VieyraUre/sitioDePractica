@@ -43,6 +43,13 @@
 		right: -20px;
 	}
 
+	&__table--bastones {
+		width: 110px;
+		position: absolute;
+		top: -40px;
+		left: 118px;
+	}
+
 	&__table--div {
 		padding: 25px;
 		border-radius: 10px;
@@ -56,6 +63,17 @@
 	&__table--td {
 		padding: 4px;
 		border-bottom: 2px solid var(--color-border);
+	}
+
+	&__table--tr {
+		&:nth-child(-n+3) {
+			color: var(--color-second-light);
+		}
+		&:nth-child(1) {
+			color: var(--color-first);
+		}
+
+
 	}
 	
 	&__table--col1 {
