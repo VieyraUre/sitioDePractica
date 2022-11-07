@@ -1,16 +1,48 @@
 .main-container {
-	&__table--caption {
-		margin-bottom: 80px;
+	&__table {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	&__table--wrapper {
+		position: relative;
+		margin: 80px 0;
+		width: 347px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	&__table--table {
+	&__table--gorro {
+		width: 150px;
+		position: absolute;
+		top: -50px;
+		left: -40px;
+	}
+	&__table--arbol {
+		width: 100px;
+		position: absolute;
+		bottom: -20px;
+		right: -20px;
+	}
+
+	&__table--div {
 		padding: 25px;
 		border-radius: 10px;
 		box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5);
-		width: 347px;
 	}
 
+	&__table--table {
+		border-collapse: collapse;
+	}
+	
 	&__table--td {
-		width: 25%;
+		padding: 4px;
+		border-bottom: 2px solid var(--color-border);
+	}
+	
+	&__table--col1 {
+		width: 50%;
+		border-right: 2px solid var(--color-border);
 	}
 }
