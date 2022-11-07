@@ -4,6 +4,23 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	&__table--mobile {
+		@include from(l) {
+			display: none;
+		}
+	}
+
+	&__table--desktop {
+		display: none;
+		@include from(l) {
+			display: block;
+			display: flex;
+			width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	
 	&__table--wrapper {
 		position: relative;
