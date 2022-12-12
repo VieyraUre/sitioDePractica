@@ -24,85 +24,82 @@ body {
 .main-header{}
 
 .main-container{
+}
 
-	&__content {
-		display: grid;
-		margin-right: auto;
-		margin-left: auto;	
-		padding: #{rem(88px)} 0;
-		width: 90%;
-		
-		@include from(l) {
-			width: #{rem(723px)};
-		}
-	}
+.main-footer {
+	background 		: var(--color-first);
+	color      		: var(--color-second);
+	padding    		: 28px 0 72px 0;
+	font-size  		: var(--small-font-size);
+	margin-top 		: auto;
+	position: relative;
+	width: 100%;
+	padding:  2.6875em  0  3.055em 0;
 	
-	&__h2 {
-		margin-right: auto;
-		margin-left: auto;	
-		text-align: center;
-		font-weight: bolder;
-		font-size: #{rem(32px)};
-		margin-bottom: #{rem(29px)};
-
-		@include from(l) {
-			width: 50%;
-		}
+	@include from(l) {
+		font-size: var(--normal-font-size);
+		padding: 5.20375em  0  10.625em 0;
 	}
 
-	&__p {
-		margin-bottom: #{rem(22px)};
+	a:hover {
+		color: var(--color-body);
+		margin-left: 0px;
 	}
 
-	&__items {
-		background-image: url("../../assets/img/seccion2-mobile.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		padding: 100px 0 100px 0;
-		margin-right: auto;
-		margin-left: auto;	
-		
-		@include from(l) {
-			background-image: url("../../assets/img/seecion2.jpg");
-			background-size: cover;
-		}
-	}
-	
-	&__grid {
-		display: grid;
+	&__ul {
+		padding-left: 0px;
 		width: 90%;
-		grid-template-columns: 1fr;
-		margin-right: auto;
-		margin-left: auto;	
+		border-bottom: 1px solid var(--color-first);
+		list-style: none;
+		margin-bottom: 0;
 		
-		@include from(l){
-			width: 1100px;
-			grid-template-columns: 347px 347px 347px;
-		}
+		@include from(m) {
+			border-bottom: none;
+			width: 100%;
+		} 
 	}
 
-	&__grid--item {
+	&__top {
+		margin-bottom: 72px;
 		display: flex;
+		justify-content: center;
 		flex-direction: column;
-		gap: #{rem(16px)};
 		align-items: center;
 		text-align: center;
 	}
 
-	&__grid--img {
-		width: 100px;
+	&__content {
+		max-width: 1280px;
+		width: calc(100% - 16px);
 	}
 
-	strong{
-		color: var(--color-first);
+	&__li:first-child {
+		margin-bottom: 1rem;
 	}
 
-}
+	&__li {
+		list-style: none;
+		text-transform: uppercase;
+	}
 
-.main-footer {
-	background 		: var(--color-background);
-	color      		: #FFF;
-	padding    		: 2rem 0;
-	font-size  		: fontSize(small);
-	margin-top 		: auto;
+	&__connect--list {
+		display: flex;
+		gap: 20px;
+		padding-left: 0;
+		
+		img {
+			width: 24px;
+			
+			@include from(l) {
+				height: 36px;
+				width: 36px;
+			}
+		}
+	}
+	
+	&__connect--li {
+		color: var(--color-body);
+		font-size: 18px;	
+		list-style: none;
+	}
 }

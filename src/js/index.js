@@ -1,13 +1,11 @@
 import {topNav} from './components/topNav'
-import {searchFilter} from './components/searchFilter'
-import {swDetecter} from './components/swDetecter';
+import tabs from './components/tabs';
 (()=>{
-	swDetecter();
 	topNav();
 	if (document.body.classList.contains('home')) {
 		// functions here
-	}else if (document.body.classList.contains('portfolio')) {
+	}else if (document.body.classList.contains('banca')) {
 		// functions here
-		searchFilter();
+		tabs();
 	}
 })();

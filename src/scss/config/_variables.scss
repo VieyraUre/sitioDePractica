@@ -1,17 +1,19 @@
 //layout
 :root {
-  --header-height 		: 3rem;
+  --header-height 		: 4rem;
   @include from(l) {
-    --header-height 	: 4rem;
+    --header-height 	: 5rem;
   }
 	//native color vars
-	--color-background      	: #262626;
-	--color-border      	: #7F7C7C;
-	--color-first      	: #76B51B;
-	--color-second      	: #19A5BC;
-	--color-second-dark      	: #15708C;
-	--color-second-light      	: #3EB0DA;
-	--color-body      	: #FFF;
+	--color-background      	: #FFFFFF;
+	--color-main      			: #F5F5F5;
+	--color-first      			: #1500FF;
+	--color-first-low      		: #40A9F5;
+	--color-acent      			: #8CC63F;
+	--color-second      		: #FFFF00;
+	--color-second-dark      	: #D1CB0D;
+	--color-third-hover     	: #9FFF1F;
+	--color-third-dark-hover    : #437500;
 }
 // Sass Color Vars
 $color-first 			: var(--color-first			);

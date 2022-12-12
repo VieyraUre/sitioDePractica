@@ -1,13 +1,18 @@
 extends ../config/template
 append config
-	-currentPage		= "Chirstmas"
-	-siteName			= 'Landing'
+	-currentPage		= "inicio"
+	-siteName			= 'CaribeBets'
 	-content			= 'content'
 	-pageDescription	= 'This website contains a collection of projects developed by Enrique Estrada using a Gulp boilerplate developed by him'
 block main-header
-	include ../components/main-hero
+
 block main-container 
-	include ../components/main-container
+	include ../components/slider.html
+	include ../components/sports.html
+	include ../components/casino-grid.html
+	include ../components/promotions-home.html
+	include ../components/pay-methods.html
+	//- include ../components/main-container
 block main-footer
-	include ../components/footer
+	//- include ../components/footer.html
 block scripts

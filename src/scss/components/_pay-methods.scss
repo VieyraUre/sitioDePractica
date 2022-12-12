@@ -1,0 +1,16 @@
+.pay-methods {
+	background-color: var(--color-first-low);
+	width: 100%;
+	margin-bottom: 0;
+	padding: 2rem 0;
+
+	&__grid {
+		max-width: 920px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__grid--img {
+		width: 195px;
+	}
+}

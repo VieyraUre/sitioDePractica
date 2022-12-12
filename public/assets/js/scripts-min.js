@@ -2,46 +2,31 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
+    value: true
 });
-var searchFilter = exports.searchFilter = function searchFilter() {
-	// get the input data
-	var fnFilter = function fnFilter(inputElement, selector, selectorContainer) {
-		inputElement.addEventListener('keyup', function (e) {
-			if (e.key === 'Escape') e.target.value = '';
-			fnCompareElements(e.target.value.toUpperCase(), selector, selectorContainer);
-		});
-	};
-	var fnCompareElements = function fnCompareElements(filterText, selector, selectorContainer) {
-		var searchElements = document.querySelectorAll(selector);
-		var searchContainers = document.querySelectorAll(selectorContainer);
-		searchElements.forEach(function (el) {
-			el.textContent.toUpperCase().includes(filterText) ? el.style.display = 'block' : el.style.display = 'none';
-		});
-		searchContainers.forEach(function (el) {
-			el.textContent.toUpperCase().includes(filterText) ? el.style.display = 'block' : el.style.display = 'none';
-		});
-	};
-	fnFilter(document.getElementById('searchInput'), '.class-item__fragment', '.class-item');
+var tabs = function tabs() {
+    var d = document,
+        tabs = Array.prototype.slice.apply(d.querySelectorAll('.tabs-container__tab')),
+        panels = Array.prototype.slice.apply(d.querySelectorAll('.tabs-container__panel'));
+
+    d.getElementById('tabs').addEventListener('click', function (e) {
+        if (e.target.classList.contains('tabs-container__tab')) {
+            var i = tabs.indexOf(e.target);
+            tabs.map(function (tab) {
+                return tab.classList.remove('is-active');
+            });
+            tabs[i].classList.add('is-active');
+            panels.map(function (tab) {
+                return tab.classList.remove('is-active');
+            });
+            panels[i].classList.add('is-active');
+        }
+    });
 };
+
+exports.default = tabs;
 
 },{}],2:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-var swDetecter = exports.swDetecter = function swDetecter() {
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('./sw.js').then(function (reg) {
-			return console.log('Registro de SW exitoso', reg);
-		}).catch(function (err) {
-			return console.warn('Error al tratar de registrar el sw', err);
-		});
-	}
-};
-
-},{}],3:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -92,26 +77,27 @@ var topNav = exports.topNav = function topNav() {
 // 	});
 // }
 
-},{}],4:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 'use strict';
 
 var _topNav = require('./components/topNav');
 
-var _searchFilter = require('./components/searchFilter');
+var _tabs = require('./components/tabs');
 
-var _swDetecter = require('./components/swDetecter');
+var _tabs2 = _interopRequireDefault(_tabs);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (function () {
-	(0, _swDetecter.swDetecter)();
 	(0, _topNav.topNav)();
 	if (document.body.classList.contains('home')) {
 		// functions here
-	} else if (document.body.classList.contains('portfolio')) {
+	} else if (document.body.classList.contains('banca')) {
 		// functions here
-		(0, _searchFilter.searchFilter)();
+		(0, _tabs2.default)();
 	}
 })();
 
-},{"./components/searchFilter":1,"./components/swDetecter":2,"./components/topNav":3}]},{},[4]);
+},{"./components/tabs":1,"./components/topNav":2}]},{},[3]);
 
 //# sourceMappingURL=scripts-min.js.map

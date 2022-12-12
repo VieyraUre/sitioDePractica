@@ -1,0 +1,110 @@
+.caballos-layout {
+	padding-top: 0.625rem;
+	
+	&__h1 {
+		color: var(--color-first);
+		text-align: center;
+		text-transform: uppercase;
+		padding-bottom: 0.2rem;
+		border-bottom: 1px solid var(--color-first-low);
+		margin-bottom: 1.875rem;
+	}
+
+	&__container {
+		max-width: 1280px;
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 1.5re;
+	}
+
+	&__container--p {
+		color: var(--color-first);
+		font-size: var(--normal-font-size);
+	}
+
+	&__racebook {
+		color: var(--color-first);
+		// text-align: center;
+	}
+
+	&__racebook--h2 {
+		font-size: var(--normal-m-font-size );
+		text-align: left;
+		font-weight: 900;
+
+		@include from(l) {
+			font-size: 28px;
+		}
+	}
+
+	&__racebook--container-table {
+		width: 100%;
+		overflow-x: scroll;
+		@include from (m){
+			overflow-x: auto;
+		}
+	}
+	
+	&__racebook--table {
+		width: 100%;
+		border: 0.96px solid var(--color-first);
+		border-collapse: collapse;
+		width: 1250px;
+	}
+	
+	&__racebook-table-col {
+		border-right: 0.96px solid var(--color-first);
+	}
+	
+	&__racebook-table--th {
+		font-weight: 500;
+		border-bottom: 0.96px solid var(--color-first);
+		padding: 4px 1rem;
+		width: 220px;
+	}
+	
+	&__racebook-table--th-bold {
+		border-bottom: 0.96px solid var(--color-first);
+		font-weight: 800;
+	}
+	
+	&__racebook-table--td {
+		padding: 4px 1rem;
+		border-bottom: 0.96px solid var(--color-first);
+		text-align: center;
+		width: 220px;
+	}
+
+	&__racebook--warning {
+		display: flex;
+		flex-direction: column;
+		font-size: var(--smaller-font-size);
+		max-width: 1250px;
+		padding-top: 0.5rem;
+		width: 100%;
+		
+		p {
+			font-weight: 900;
+		}
+		
+		a {
+			text-align: center;
+		}
+
+		@include from(m) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+
+			a {		
+				width: auto;
+			}
+		}
+	}
+	
+	&__sign-up {
+		text-align: center;
+	}
+	
+}

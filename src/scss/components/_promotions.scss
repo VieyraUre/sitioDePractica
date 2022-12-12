@@ -1,0 +1,109 @@
+.promotions {
+	padding-top: 0.625rem;
+	text-align: center;
+	margin-bottom: 0;
+	
+    &__h1 {
+		color: var(--color-first);
+        text-align: center;
+		padding: 0 0 0.375rem 0;
+		border-bottom: 1px solid var(--color-first-low);
+		width: 100%;
+		margin: 0;
+		font-weight: 900;
+		text-transform: uppercase;
+    }
+	
+    &__background {
+		padding-top: 2.375rem;
+		background-color: var(--color-main);
+		padding-bottom: 52px;
+		margin-bottom: 0;
+    }
+
+	&__grid {
+		align-items: flex-start;
+		max-width: 1280px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		gap: 1rem;
+		
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 9px;
+	}
+
+	&__box--content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		text-transform: uppercase;
+		align-items: center;
+		justify-content: center;
+
+		h3 {
+			color: var(--color-first);
+		}
+		
+		p {
+			color: var(--color-first-low);
+		}
+	}
+
+	&__box--description-h3 {
+		font-size: 40px;
+		font-weight: 800;
+		margin: 0;
+		padding: 0;
+		
+		@include from(l) {
+			font-size: 56px;
+		}
+	}
+
+	&__box--description-p {
+		font-size: var(--normal-font-size);
+		font-weight: 500;
+		margin: 0;
+		margin-top: -10px;
+		
+		@include from(l) {
+			margin-top: -16px;
+			font-size: 17px;
+		}
+	}
+
+	&__box--description-large {
+		margin: 0;
+		margin-bottom: -16px;
+		margin-left: -16px;
+	}
+
+	&__box--img {
+		object-fit: cover;
+	}
+
+	&__box--description {
+		position: absolute;
+		top: 0;
+		left: 0;
+		max-height: 292px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 0.5rem;
+	}
+
+	&__box--href {
+		text-transform: uppercase;
+		color: var(--color-first-low);
+		text-decoration: underline;
+	}
+}

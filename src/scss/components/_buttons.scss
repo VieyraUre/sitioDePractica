@@ -1,17 +1,82 @@
 .btn {
 	border: none;
-    border-radius: 6px;
 	color: var(--color-body);
+	font-size: var(--smaller-font-size);
 	font-weight: bold;
-    padding: 8px;
+    padding: 6px;
 	text-transform: uppercase;
+
+	@include from(l) {
+		padding: 6px 12px;
+	}
+
+	&__login {
+		background-color: var(--color-first);
+		color: var(--color-main);
+		transition: 1s;
+		
+		@include from(l) {
+			&:hover {
+				background-color: var(--color-first-low);
+			}
+		}
+	}
+
+	&__sign-up {
+		background-color: var(--color-acent );
+		color: var(--color-second);
+		transition: 1s;
+		
+		@include from(l) {
+			&:hover {
+				background-color: var(--color-third-hover);
+				color: var(--color-third-dark-hover);
+			}
+		}
+	}
 	
 	&__primary {
-		background-color: var(--color-first);
+		background-color: var(--color-acent );
+		color: var(--color-second);
+		padding: 10px 14px;
+		font-size: var(--normal-font-size);
+		transition: 1s;
+		
+		@include from(l) {
+			&:hover {
+				background-color: var(--color-third-hover);
+				color: var(--color-third-dark-hover);
+			}
+		}
 	}
 	
 	&__secondary {
-		background-color: var(--color-second-light);
+		background-color: var(--color-first);
+		color: var(--color-main);
+		padding: 10px 14px;
+		font-size: var(--normal-font-size);
+		transition: 1s;
+		
+		@include from(l) {
+			&:hover {
+				background-color: var(--color-first-low);
+			}
+		}
+	}
+	
+	&__third {
+		background-color: var(--color-first-low);
+		color: var(--color-main);
+		border-radius: 3px;
+		// font-size: var(--normal-font-size);
+		padding: 10px 14px;
+		transition: 1s;
+		
+		@include from(l) {
+			&:hover {
+				background-color: var(--color-first);
+			}
+		}
 	}
 }
 

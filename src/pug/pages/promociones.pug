@@ -1,0 +1,14 @@
+extends ../config/template
+append config
+	-currentPage		= "promociones"
+	-siteName			= 'CaribeBets'
+	-content			= 'content'
+	-pageDescription	= 'This website contains a collection of projects developed by Enrique Estrada using a Gulp boilerplate developed by him'
+block main-header
+
+block main-container 
+	include ../components/promotions.html
+	include ../components/pay-methods.html
+block main-footer
+
+block scripts

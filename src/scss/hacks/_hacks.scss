@@ -32,3 +32,28 @@ img {
 .foot-icon{
 	margin-left: 5px;
 }
+
+.promotions-home {
+	background-color: var(--color-background);
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	
+	&__container {
+		max-width: 1280px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	&__h2 {
+		max-width: 1280px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	&__grid {
+		padding-top: 1rem;
+	}
+}

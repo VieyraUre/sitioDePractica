@@ -1,0 +1,267 @@
+.slider {
+	
+	&__slides {
+		width: 100%;
+	}
+
+	&__slides--item{
+		position: relative;
+	}
+	
+	&__slides--img {
+		object-fit: cover;
+
+		@include from(m) {
+			height: 30vh;
+		}
+
+		@include from(l) {
+			height: auto;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction    : column;
+		justify-content   : flex-start;
+		max-width: 1280px;
+		width: 90%;
+		position: absolute;
+		top: 0px;
+		right: 0;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
+		text-transform: uppercase;
+		padding: 30px 0;
+		max-height: 400px;
+		height: 100%;
+		justify-content: flex-start;
+		
+		@include from(m) {
+			align-items: flex-start;
+			justify-content: center;
+			padding: 8px 0;
+		}
+
+		@include from(l) {
+			width: 98%;
+		}
+
+		@include from(lg) {
+			width: 98%;
+		}
+		
+		@include from(xl) {
+			width: 100%;
+		}
+	}
+	
+	&__content--h1 {
+		color: var(--color-first);
+		font-size: 80px;
+		font-weight: 800;
+		margin: 0;
+		padding: 0;
+		margin-top: -20px;
+		
+		@include from(m) {
+			font-size: 60px;
+		}
+
+		@include from(l) {
+			font-size: 70px;
+		}
+		
+		@include from(lg) {
+			font-size: 80px;
+		}
+		
+		@include from(xl) {
+			font-size: 120px;
+		}
+	}
+
+	&__content--p {
+		color: var(--color-first-low);
+		font-size: var(--normal-font-size);
+		font-weight: 500;
+		margin: 0;
+
+		@include from(lg) {
+			font-size: 20px;
+		}
+		
+		@include from(xl) {
+			font-size: 20px;
+		}
+	}
+
+	&__content--a {
+		display: none;
+		padding: 8px 48px;
+		font-size: var(--h3-font-size);
+
+		@include from(m) {
+			display: block;
+		}
+	}
+
+	&__link {
+		display: block;
+		position: absolute;
+		bottom: 1rem;
+		text-align: center;
+		left: 0;
+		right: 0;
+
+		@include from(m) {
+			display: none;
+		}
+	}
+}
+
+.gallos {
+	line-height: 1.5rem;
+
+	@include from(lg) {
+		line-height: 2rem;
+	}
+
+	& :nth-child(2) {
+		color: var(--color-first);
+		font-size: var(--h3-font-size);
+		font-weight: 100;
+	
+		@include from(lg) {
+			font-size: 2rem;
+		}
+	}
+
+	& :nth-child(3) {
+		color: var(--color-first);
+		font-size: var(--h2-font-size);
+		margin: 0;
+	
+		@include from(lg) {
+			font-size: 3rem;
+		}
+	}
+}
+
+.caballos-slider {
+	line-height: 1.5rem;
+
+	@include from(lg) {
+		line-height: 2rem;
+	}
+
+	& :nth-child(1), :nth-child(2) {
+		color: var(--color-first);
+		font-size: var(--h3-font-size);
+		font-weight: 100;
+	
+		@include from(m) {
+			font-size: 1rem;
+		}
+
+		@include from(lg) {
+			font-size: 1.5rem;
+		}
+	}
+
+	& :nth-child(3) strong {
+		color: var(--color-first-low);
+		font-size: var(--normal-m-font-size);
+		font-weight: 700;
+		margin: 0;
+	
+		@include from(m) {
+			font-size: 1rem;
+		}
+
+		@include from(lg) {
+			font-size: 1.5rem;
+		}
+	}
+
+	& :nth-child(4) {
+		margin: 0;
+		line-height: 80px;
+
+		@include from(m) {
+			font-size: 4rem;
+		}
+
+		@include from(lg) {
+			font-size: 6rem;
+		}
+	}
+
+	& :nth-child(5) strong {
+		color: var(--color-first-low);
+		font-size: var(--normal-m-font-size);
+		font-weight: 700;
+		margin: 0;
+	
+		@include from(m) {
+			font-size: 1rem;
+		}
+
+		@include from(lg) {
+			font-size: 1.5rem;
+		}
+	}
+
+	& :nth-child(4), :nth-child(5) {
+		left: 0;
+		margin-left: -140px;
+
+		@include from(m) {
+			margin-left: 0;
+		}
+		@include from(xl) {
+			margin-left: 50px;
+		}
+	}
+
+}
+
+.rugby {
+	padding: 8px 0;
+
+	& :nth-child(1) {
+		font-size: 1rem;
+		color: var(--color-first);
+	}
+
+	& :nth-child(2) {
+		line-height: 120px;
+
+		@include from(m) {
+			font-size: 4rem;
+		}
+		@include from(l) {
+			font-size: 6rem;
+		}
+	}
+	
+	& :nth-child(3){
+		font-size: var(--h3-font-size);
+		margin-top: -18px;
+	}
+	
+	& :nth-child(4) strong {
+		font-size: var(--smaller-font-size);
+		letter-spacing: -1px;
+
+		@include from(xl) {
+			font-size: 1rem;
+		}
+	}
+
+	& :nth-child(3) strong, :nth-child(4) strong {
+		color: var(--color-first-low);
+	}
+}
